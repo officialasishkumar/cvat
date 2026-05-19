@@ -198,7 +198,7 @@ class AnnotationIR:
             for interval in self.intervals:
                 if not self.is_interval_inside(interval, start, stop):
                     raise Exception(
-                        f"Interval {interval.id} cannot be sliced to the [{start}, {stop}] range"
+                        f"Interval {interval['id']} cannot be sliced to the [{start}, {stop}] range"
                     )
             splitted_data.intervals = deepcopy(self.intervals)
 
